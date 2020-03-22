@@ -62,6 +62,6 @@ class GroceryListItem extends React.Component {
       </li>
     );
   }
-}
+};
 
 ReactDOM.render(<GroceryList />, document.getElementById('app'));
