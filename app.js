@@ -1,7 +1,13 @@
 var GroceryList = () => {
+  let items = ['ham', 'pizza', 'eggs', 'kiwis'];
+  let groceryItems = items.map((item) => {
+    return (
+      <GroceryListItem item={item} />
+    );
+  });
   return (
     <div>
-      <GroceryListItem groceryItems={['ham', 'pizza', 'eggs', 'kiwis']} />
+      <ul>{groceryItems}</ul>
     </div>
   );
 };
@@ -19,11 +25,8 @@ var Pizza = () => {
 };
 
 var GroceryListItem = (props) => {
-  let items = props.items.map((item) => {
-    return <li>{item}</li>
-  });
   return (
-    <ul>{items}</ul>
+    <li>{props.item}</li>
   );
 }
 
