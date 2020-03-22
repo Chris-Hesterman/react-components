@@ -1,24 +1,30 @@
 var GroceryList = () => {
   return (
     <div>
-      <ul>
-        <SmokedHam />
-        <Pizza />
-      </ul>
+      <GroceryListItem groceryItems={['ham', 'pizza', 'eggs', 'kiwis']} />
     </div>
   );
 };
 
 var SmokedHam = () => {
   return (
-    <p>Smoked Ham</p>
+    <li>Smoked Ham</li>
   );
 };
 
 var Pizza = () => {
   return (
-    <p>Pizza</p>
+    <li>Pizza</li>
   );
 };
+
+var GroceryListItem = (props) => {
+  let items = props.items.map((item) => {
+    return <li>{item}</li>
+  });
+  return (
+    <ul>{items}</ul>
+  );
+}
 
 ReactDOM.render(<GroceryList />, document.getElementById('app'));
