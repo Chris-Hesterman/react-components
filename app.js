@@ -24,10 +24,16 @@ var Pizza = () => {
   );
 };
 
-var GroceryListItem = (props) => {
-  return (
-    <li>{props.item}</li>
-  );
+class GroceryListItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <li>{this.props.item}</li>
+    );
+  }
 }
 
 ReactDOM.render(<GroceryList />, document.getElementById('app'));
