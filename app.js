@@ -2,10 +2,22 @@ var GroceryList = () => {
   return (
     <div>
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
+        <SmokedHam />
+        <Pizza />
       </ul>
     </div>
+  );
+};
+
+var SmokedHam = () => {
+  return (
+    <p>Smoked Ham</p>
+  );
+};
+
+var Pizza = () => {
+  return (
+    <p>Pizza</p>
   );
 };
 
